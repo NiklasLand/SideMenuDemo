@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+}
+nav{
+ height:70px;
+ background-color: green;
+}
+.nav-spacer{
+ display: flex;
+ height: calc(100vh - 70px);
+}
+.nav-spacer .main-body{
+ width: 100%;
+}
+.nav-spacer aside{
+  width: 70px;
+  overflow-y: auto;
+  transition: all 0.3s;
+  background-color: white;
+}
+.nav-spacer aside:hover {
+    width: 200px;
+}
+
+.nav-spacer aside.expanding{
+    width: 200px;
+}
+
+.main-body {
+    background-color: #eff2f4;
+}
+
+:host ::ng-deep .p-menuitem-link {
+    padding-left: 0;
+}
+
+:host ::ng-deep .p-menuitem-link-active {
+    background-color: #dddddd;
+}
+:host ::ng-deep .p-menuitem-icon {
+    font-size: 2rem;
+    margin-left: 1rem;
+    margin-right: 1.5rem !important;
+}
+
+

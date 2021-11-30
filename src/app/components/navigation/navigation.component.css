@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+}
+nav{
+ height:70px;
+ background-color: green;
+}
+.nav-spacer{
+ display: flex;
+ height: calc(100vh - 70px);
+}
+.nav-spacer .main-body{
+ width: 100%;
+}
+.nav-spacer aside{
+  width: 0;
+  overflow-y: auto;
+  transition: all 0.3s;
+  background-color: yellow;
+}
+/*Im using hover event to expand sidebar for example, you can use JS to handle click event*/
+.nav-spacer aside.expanding{
+  width: 320px;
+}
