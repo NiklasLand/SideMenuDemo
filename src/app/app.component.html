@@ -1,10 +1,14 @@
 
 <nav>
-    <p-button type="button" (click)="display = !display" icon="pi pi-bars" styleClass="p-button-lg"></p-button>
 </nav>
 <section class="nav-spacer">
-    	<aside [ngClass]="{'expanding': display}">
-                <p-menu [model]="menuItems"></p-menu>
+    	<aside [ngClass]="{'expanding': checked || display}" (mouseenter)="setDisplay(true) " (mouseleave)="setDisplay(false)">
+             <!-- 
+              <p-button type="button" (click)="display = !display" icon="pi pi-bars" styleClass="p-button-lg"></p-button>
+             --> 
+              <p-toggleButton offIcon="pi pi-bars" onIcon="pi pi-times" [(ngModel)]="checked"></p-toggleButton>
+  
+              <p-menu [model]="menuItems"></p-menu>
         </aside>
         <div class="main-body">
             <router-outlet></router-outlet>

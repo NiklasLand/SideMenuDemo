@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuItem } from 'primeng/api';
+import {ToggleButtonModule} from 'primeng/togglebutton';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -8,10 +10,11 @@ import { MenuItem } from 'primeng/api';
 
 
 export class AppComponent implements OnInit {
-  title = 'CelebrityWatch';
+  title = 'SidenavDemo';
   
   
   display : boolean = false;
+  checked: boolean = false;
   menuItems: MenuItem[] = [];
 
   ngOnInit(): void {
@@ -22,4 +25,9 @@ export class AppComponent implements OnInit {
       
     ]
   }
+
+  setDisplay(bool : boolean) {
+    this.display = bool;
+  }
+  
 }

@@ -18,9 +18,7 @@ nav{
   transition: all 0.3s;
   background-color: white;
 }
-.nav-spacer aside:hover {
-    width: 200px;
-}
+
 
 .nav-spacer aside.expanding{
     width: 200px;
